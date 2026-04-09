@@ -8,6 +8,7 @@
     "dev": "nodemon src/server.js",
     "seed": "node src/utils/seedAdmin.js",
     "seed-data": "node src/utils/seedData.js",
+    "install:frontend": "cd ../frontend && npm install",
     "build": "cd ../frontend && npm run build",
     "build:frontend": "cd ../frontend && npm run build"
   },
