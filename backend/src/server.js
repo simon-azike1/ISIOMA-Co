@@ -17,14 +17,33 @@ dotenv.config();
 
 const app = express();
 
-app.use(helmet());
-const allowedOrigins = process.env.CLIENT_URL 
-  ? process.env.CLIENT_URL.split(',') 
-  : ['http://localhost:5173'];
+app.use(helmet({ 
+  crossOriginResourcePolicy: false,
+  crossOriginEmbedderPolicy: false
+}));
+
+const clientUrl = process.env.CLIENT_URL || 'https://isioma-co.vercel.app';
+const allowedOrigins = clientUrl.split(',').map(o => o.trim());
 
 app.use(cors({
-  origin: allowedOrigins,
-  credentials: true
+  origin: (origin, callback) => {
+    // Allow requests with no origin (like mobile apps or curl)
+    if (!origin) {
+      return callback(null, true);
+    }
+    // Allow if origin matches allowed list
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    // Allow localhost for development
+    if (origin.startsWith('http://localhost')) {
+      return callback(null, true);
+    }
+    callback(new Error('Not allowed by CORS'));
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
