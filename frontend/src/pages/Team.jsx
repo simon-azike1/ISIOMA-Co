@@ -5,8 +5,9 @@ import SectionHeader from '../components/SectionHeader'
 const team = [
   {
     name: 'Isioma Jikeme',
-    role: 'Managing Partner',
+    role: 'Founder & Managing Partner',
     image: '/isioma.png',
+    hasImage: true,
     bio: 'Fellow of the Institute of Chartered Accountants of Nigeria (ICAN) with over 15 years of experience in audit, tax, and financial advisory.',
     credentials: ['ICAN Fellow', '15+ Years Experience', 'MBA'],
     linkedin: '#',
@@ -14,9 +15,10 @@ const team = [
     phone: '+32 485 58 42 52'
   },
   {
-    name: 'Chukwuma Okonkwo',
+    name: 'Obi Jikeme',
     role: 'Senior Tax Consultant',
-    image: '/isioma1.png',
+    image: '/obi.png',
+    hasImage: true,
     bio: 'Specialises in corporate tax planning and compliance for SMEs and multinational corporations operating in West Africa.',
     credentials: ['ACA', 'Tax Specialist', '10+ Years'],
     linkedin: '#',
@@ -24,9 +26,10 @@ const team = [
     phone: '+234 800 000 0000'
   },
   {
-    name: 'Adaeze Nwosu',
+    name: 'Emeka Jikeme',
     role: 'Business Advisory Lead',
-    image: '/isioma2.png',
+    image: '/emeke.png',
+    hasImage: true,
     bio: 'Expert in financial restructuring and business strategy, having worked with over 50 startups and SMEs across Africa.',
     credentials: ['MBA', 'Strategy Expert', '8+ Years'],
     linkedin: '#',
@@ -34,9 +37,10 @@ const team = [
     phone: '+234 800 000 0000'
   },
   {
-    name: 'Emeka Adeyemi',
+    name: 'Ajulu Jikeme',
     role: 'Audit Manager',
-    image: '/isioma3.png',
+    image: '/ajulu.png',
+    hasImage: true,
     bio: 'Leads audit engagements for nonprofit organisations and corporates, ensuring compliance with international standards.',
     credentials: ['ACA', 'Audit Lead', '7+ Years'],
     linkedin: '#',
@@ -86,13 +90,15 @@ export default function Team() {
                 style={{ background: 'var(--bg-primary)', borderColor: 'var(--border-light)' }}
               >
                 {/* Image */}
-                <div className="aspect-[3/4] overflow-hidden">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+                {member.hasImage && (
+                  <div className="aspect-[3/4] overflow-hidden">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
                 
                 {/* Info */}
                 <div className="p-6">
