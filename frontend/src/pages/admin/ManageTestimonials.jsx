@@ -14,7 +14,7 @@ export default function ManageTestimonials() {
 
   const fetchTestimonials = async () => {
     const res = await testimonialsAPI.getAll();
-    setTestimonials(res.data.data);
+    setTestimonials(Array.isArray(res.data?.data) ? res.data.data : []);
     setLoading(false);
   };
 

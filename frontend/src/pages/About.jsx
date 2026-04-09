@@ -29,7 +29,7 @@ export default function About() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-white">
+      <section className="pt-32 pb-20" style={{ background: 'var(--bg-primary)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -85,7 +85,7 @@ export default function About() {
       </section>
 
       {/* Story */}
-      <section className="py-20 bg-white">
+      <section className="py-20" style={{ background: 'var(--bg-primary)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}

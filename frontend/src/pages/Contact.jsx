@@ -19,7 +19,7 @@ export default function Contact() {
 
   useEffect(() => {
     faqsAPI.getAll()
-      .then(res => setFaqs(res.data.data))
+      .then(res => setFaqs(Array.isArray(res.data?.data) ? res.data.data : []))
       .catch(err => console.error(err))
       .finally(() => setLoadingFaqs(false))
   }, [])
@@ -236,19 +236,18 @@ export default function Contact() {
       </section>
 
       {/* CTA */}
-      <section style={{ background: 'var(--charcoal-950)' }} className="py-24">
+      <section className="py-24" style={{ background: '#1A1A1A' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="max-w-2xl mx-auto"
-            style={{ color: 'white' }}
           >
-            <h2 className="text-3xl md:text-4xl font-semibold mb-4" style={{color:"white"}}>
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4" style={{ color: '#FFFFFF !important' }}>
               Prefer to speak directly?
             </h2>
-            <p className="mb-8 text-lg" style={{ color: 'var(--charcoal-400)' }}>
+            <p className="mb-8 text-lg" style={{ color: '#C2C2C2 !important' }}>
               Book a free 30-minute discovery call or chat with us on WhatsApp.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -272,7 +271,7 @@ export default function Contact() {
                 whileTap={{ scale: 0.98 }}
                 className="inline-block"
               >
-                <a href="mailto:Isijik@gmail.com" className="btn-outline" style={{ borderColor: 'var(--charcoal-600)', color: 'white' }}>
+                <a href="mailto:Isijik@gmail.com" className="btn-outline" style={{ borderColor: '#C2C2C2', color: '#FFFFFF' }}>
                   <Mail size={16} />
                   Send Email
                 </a>

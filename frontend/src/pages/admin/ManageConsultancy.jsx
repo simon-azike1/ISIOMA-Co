@@ -25,7 +25,7 @@ export default function ManageConsultancy() {
       const res = await consultancyAPI.getAll();
       console.log('Admin consultancy response:', res.data);
       if (res.data && res.data.success) {
-        setConsultancies(res.data.data || []);
+        setConsultancies(Array.isArray(res.data?.data) ? res.data.data : []);
       } else {
         console.error('Unexpected response format:', res.data);
         setConsultancies([]);

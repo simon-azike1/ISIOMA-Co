@@ -14,7 +14,7 @@ export default function ManageProjects() {
 
   const fetchProjects = async () => {
     const res = await projectsAPI.getAll();
-    setProjects(res.data.data);
+    setProjects(Array.isArray(res.data?.data) ? res.data.data : []);
     setLoading(false);
   };
 

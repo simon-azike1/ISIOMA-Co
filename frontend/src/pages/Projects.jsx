@@ -32,7 +32,7 @@ export default function Projects() {
 
   useEffect(() => {
     projectsAPI.getAll()
-      .then(res => setProjects(res.data.data))
+      .then(res => setProjects(Array.isArray(res.data?.data) ? res.data.data : []))
       .catch(err => console.error(err))
       .finally(() => setLoading(false))
   }, [])

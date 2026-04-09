@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "build": "cd frontend && npm run build"
+  },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
     "react-router-dom": "^7.13.2",

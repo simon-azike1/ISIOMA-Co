@@ -14,7 +14,7 @@ export default function ManageFaqs() {
 
   const fetchFaqs = async () => {
     const res = await faqsAPI.getAll();
-    setFaqs(res.data.data);
+    setFaqs(Array.isArray(res.data?.data) ? res.data.data : []);
     setLoading(false);
   };
 

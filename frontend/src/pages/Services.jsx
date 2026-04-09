@@ -21,7 +21,7 @@ export default function Services() {
 
   useEffect(() => {
     servicesAPI.getAll()
-      .then(res => setServices(res.data.data))
+      .then(res => setServices(Array.isArray(res.data?.data) ? res.data.data : []))
       .catch(err => console.error(err))
       .finally(() => setLoading(false))
   }, [])

@@ -14,7 +14,7 @@ export default function ManageServices() {
 
   const fetchServices = async () => {
     const res = await servicesAPI.getAll();
-    setServices(res.data.data);
+    setServices(Array.isArray(res.data?.data) ? res.data.data : []);
     setLoading(false);
   };
 

@@ -65,7 +65,7 @@ export default function Consultancy() {
         setConsultancies(Array.isArray(consultancyRes.data.data) ? consultancyRes.data.data : [])
       }
       if (faqsRes.data?.success) {
-        setFaqs(faqsRes.data.data || [])
+        setFaqs(Array.isArray(faqsRes.data.data) ? faqsRes.data.data : [])
       }
     })
     .catch(err => {

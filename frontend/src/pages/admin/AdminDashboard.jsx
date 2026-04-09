@@ -32,14 +32,14 @@ export default function AdminDashboard() {
         ]);
         
         setStats({
-          services: services.data.data.length,
-          projects: projects.data.data.length,
-          testimonials: testimonials.data.data.length,
-          faqs: faqs.data.data.length,
-          messages: messages.data.data.length
+          services: Array.isArray(services.data?.data) ? services.data.data.length : 0,
+          projects: Array.isArray(projects.data?.data) ? projects.data.data.length : 0,
+          testimonials: Array.isArray(testimonials.data?.data) ? testimonials.data.data.length : 0,
+          faqs: Array.isArray(faqs.data?.data) ? faqs.data.data.length : 0,
+          messages: Array.isArray(messages.data?.data) ? messages.data.data.length : 0
         });
         
-        setRecentMessages(messages.data.data.slice(0, 5));
+        setRecentMessages(Array.isArray(messages.data?.data) ? messages.data.data.slice(0, 5) : []);
       } catch (error) {
         console.error('Error fetching stats:', error);
       } finally {

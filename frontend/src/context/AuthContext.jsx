@@ -15,8 +15,10 @@ export const AuthProvider = ({ children }) => {
       setAdmin(JSON.parse(storedAdmin));
       authAPI.getMe()
         .then(res => {
-          setAdmin(res.data.data);
-          localStorage.setItem('admin', JSON.stringify(res.data.data));
+          if (res.data?.data) {
+            setAdmin(res.data.data);
+            localStorage.setItem('admin', JSON.stringify(res.data.data));
+          }
         })
         .catch(() => {
           localStorage.removeItem('token');
@@ -31,11 +33,14 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     const res = await authAPI.login({ email, password });
-    const { token, admin: adminData } = res.data.data;
-    localStorage.setItem('token', token);
-    localStorage.setItem('admin', JSON.stringify(adminData));
-    setAdmin(adminData);
-    return res.data;
+    if (res.data?.data) {
+      const { token, admin: adminData } = res.data.data;
+      localStorage.setItem('token', token);
+      localStorage.setItem('admin', JSON.stringify(adminData));
+      setAdmin(adminData);
+      return res.data;
+    }
+    throw new Error('Invalid response');
   };
 
   const logout = () => {

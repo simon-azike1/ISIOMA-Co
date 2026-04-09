@@ -11,7 +11,7 @@ export default function ManageMessages() {
 
   const fetchMessages = async () => {
     const res = await contactAPI.getMessages();
-    setMessages(res.data.data);
+    setMessages(Array.isArray(res.data?.data) ? res.data.data : []);
     setLoading(false);
   };
 
