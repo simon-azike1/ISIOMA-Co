@@ -1,0 +1,414 @@
+@import "tailwindcss";
+@import 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap';
+
+:root {
+  /* ── Core Palette ─────────────────────────────── */
+  --charcoal-950: #0E0E0E;
+  --charcoal-900: #1A1A1A;
+  --charcoal-800: #2C2C2C;
+  --charcoal-700: #3D3D3D;
+  --charcoal-600: #555555;
+  --charcoal-500: #737373;
+  --charcoal-400: #9E9E9E;
+  --charcoal-300: #C2C2C2;
+  --charcoal-200: #DEDEDE;
+  --charcoal-100: #F0EFED;
+  --charcoal-50:  #F8F7F5;
+
+  /* Warm gold accent — restraint is key */
+  --gold-700: #8A6A2A;
+  --gold-600: #A07D35;
+  --gold-500: #B8923F;
+  --gold-400: #C9A455;
+  --gold-300: #DBBF7D;
+  --gold-100: #F5EDD8;
+  --gold-50:  #FAF6EC;
+
+  /* Semantic */
+  --text-primary:   var(--charcoal-900);
+  --text-secondary: var(--charcoal-600);
+  --text-muted:     var(--charcoal-400);
+  --text-inverse:   #F8F7F5;
+
+  --bg-primary:   #FAFAF8;
+  --bg-secondary: var(--charcoal-50);
+  --bg-inverse:   var(--charcoal-950);
+
+  --border-light:  var(--charcoal-100);
+  --border-medium: var(--charcoal-200);
+  --border-strong: var(--charcoal-700);
+
+  --accent:       var(--gold-600);
+  --accent-dark:  var(--gold-700);
+  --accent-light: var(--gold-300);
+
+  /* Typography */
+  --font-sans:    'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif:   'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+
+  /* Spacing scale */
+  --section-padding: clamp(4rem, 8vw, 7rem);
+
+  /* Transitions */
+  --transition-base: 200ms ease;
+  --transition-slow: 350ms ease;
+
+  font: 16px/1.7 var(--font-sans);
+  letter-spacing: -0.01em;
+  color-scheme: light;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --charcoal-950: #FAFAF8;
+  --charcoal-900: #F0EFED;
+  --charcoal-800: #DEDEDE;
+  --charcoal-700: #C2C2C2;
+  --charcoal-600: #9E9E9E;
+  --charcoal-500: #737373;
+  --charcoal-400: #555555;
+  --charcoal-300: #3D3D3D;
+  --charcoal-200: #2C2C2C;
+  --charcoal-100: #1A1A1A;
+  --charcoal-50:  #0E0E0E;
+
+  --text-primary:   #F8F7F5;
+  --text-secondary: #C2C2C2;
+  --text-muted:     #9E9E9E;
+  --text-inverse:   #0E0E0E;
+
+  --bg-primary:   #0E0E0E;
+  --bg-secondary: #1A1A1A;
+  --bg-inverse:   #FAFAF8;
+
+  --border-light:  #2C2C2C;
+  --border-medium: #3D3D3D;
+  --border-strong: #737373;
+
+  color-scheme: dark;
+}
+
+/* ── Reset & Base ─────────────────────────────── */
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100svh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Typography ───────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.15;
+}
+
+/* h1 {
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+  letter-spacing: -0.02em;
+} */
+
+h1 {
+  font-size: clamp(2.2rem, 4.5vw, 3.75rem);
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  letter-spacing: -0.01em;
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* ── Buttons ──────────────────────────────────── */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FAFAF8;
+  background: var(--accent);
+  padding: 0.8rem 1.5rem;
+  border: 1px solid var(--accent);
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  color: #FAFAF8;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--charcoal-900);
+  background: transparent;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid var(--charcoal-300);
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--charcoal-900);
+  color: var(--charcoal-900);
+}
+
+/* ── Components ───────────────────────────────── */
+
+.card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--border-medium);
+  box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.15);
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: clamp(1.25rem, 4vw, 3rem);
+  padding-right: clamp(1.25rem, 4vw, 3rem);
+}
+
+/* ── Link with animated underline ─────────────── */
+
+.link-underline {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* ── Link with animated background ───────────── */
+
+.link-bg {
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.link-bg::before {
+  content: '';
+  position: absolute;
+  inset: -2px -6px;
+  background: var(--accent);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.link-bg:hover {
+  color: var(--charcoal-950);
+}
+
+.link-bg:hover::before {
+  opacity: 1;
+}
+
+/* ── Links with gold ──────────────────────────── */
+
+.link-gold {
+  position: relative;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.link-gold::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.link-gold:hover::after { width: 100%; }
+
+/* ── Gold button variant ──────────────────────── */
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--accent);
+  background: transparent;
+  padding: 0.75rem 0;
+  border: none;
+  transition: color 0.2s ease;
+}
+
+.btn-gold:hover { color: var(--accent-dark); }
+
+/* ── Inputs ───────────────────────────────────── */
+
+input, textarea, select {
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: 1.5px solid var(--gold-500);
+  outline-offset: -1.5px;
+}
+
+/* ── Hide/Show utilities ───────────────────────── */
+
+.hidden-mobile { @media (max-width: 768px) { display: none !important; } }
+.show-mobile  { @media (min-width: 769px) { display: none !important; } }
+
+/* ── Animations ───────────────────────────────── */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in { animation: fadeIn 0.6s ease forwards; }
+.animate-fade-in-up { animation: fadeInUp 0.6s ease forwards; }
+.animate-scale-in { animation: scaleIn 0.6s ease forwards; }
+
+/* ── Utility classes ──────────────────────────── */
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Form elements dark mode fixes ───────────── */
+
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background: var(--charcoal-100);
+  border-color: var(--border-medium);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: var(--charcoal-400);
+}
+
+/* ── Image filters for dark mode ──────────────── */
+
+[data-theme="dark"] img {
+  opacity: 0.9;
+}
