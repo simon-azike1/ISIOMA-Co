@@ -341,8 +341,12 @@ input:focus, textarea:focus, select:focus {
 
 /* ── Hide/Show utilities ───────────────────────── */
 
-.hidden-mobile { @media (max-width: 768px) { display: none !important; } }
-.show-mobile  { @media (min-width: 769px) { display: none !important; } }
+@media (max-width: 768px) {
+  .hidden-mobile { display: none !important; }
+}
+@media (min-width: 769px) {
+  .show-mobile { display: none !important; }
+}
 
 /* ── Animations ───────────────────────────────── */
 
@@ -411,4 +415,23 @@ input:focus, textarea:focus, select:focus {
 
 [data-theme="dark"] img {
   opacity: 0.9;
+}
+
+
+/* ADD THIS CSS */
+
+/* Mobile first */
+.hidden-mobile { display: none; }
+.show-mobile { display: flex; }
+
+@media (min-width: 768px) {
+  .hidden-mobile { display: flex; }
+  .show-mobile { display: none; }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
