@@ -96,9 +96,9 @@ export default function ContactForm() {
         disabled={status === 'sending'}
         className="self-start inline-flex items-center gap-2 px-8 py-3 text-sm font-medium transition-colors disabled:opacity-50"
         style={{ 
-          background: 'var(--charcoal-900)', 
-          color: 'white',
-          border: '1px solid var(--charcoal-900)'
+          background: '#A07D35', 
+          color: '#FAFAF8',
+          border: '1px solid #A07D35'
         }}
       >
         {status === 'sending' ? (

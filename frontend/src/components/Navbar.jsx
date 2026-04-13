@@ -15,16 +15,11 @@ const links = [
 ]
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const { pathname } = useLocation()
   const { toggleTheme, isDark } = useTheme()
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  
 
   useEffect(() => setMenuOpen(false), [pathname])
 
@@ -45,9 +40,9 @@ export default function Navbar() {
           left: 0,
           right: 0,
           zIndex: 100,
-          background: scrolled ? 'var(--bg-primary)' : 'transparent',
-          borderBottom: scrolled ? '1px solid var(--border-light)' : '1px solid transparent',
-          backdropFilter: scrolled ? 'blur(12px)' : 'none',
+          background: 'var(--bg-primary)',
+          borderBottom: '1px solid var(--border-light)',
+          backdropFilter: 'blur(12px)',
         }}
       >
         <div
@@ -89,7 +84,7 @@ export default function Navbar() {
                 <Link key={path} to={path} style={{
                   fontSize: '0.75rem',
                   textTransform: 'uppercase',
-                  color: active ? 'var(--text-primary)' : 'gray',
+                  color: active ? 'var(--accent)' : 'var(--accent)',
                   position: 'relative'
                 }}>
                   {label}
@@ -178,10 +173,12 @@ export default function Navbar() {
             style={{
               position: 'fixed',
               inset: 0,
-              background: '#111',
+              background: '#FAFAF8',
               padding: 'clamp(1.25rem,6vw,3rem)',
               display: 'flex',
-              flexDirection: 'column'
+              flexDirection: 'column',
+              color: '#0E0E0E',
+              zIndex: 200
             }}
           >
 
@@ -201,8 +198,13 @@ export default function Navbar() {
                       display: 'flex',
                       justifyContent: 'space-between',
                       padding: '1rem 0',
-                      fontSize: 'clamp(1.4rem,4vw,2rem)'
-                    }}>
+                      fontSize: 'clamp(1.4rem,4vw,2rem)',
+                      color: '#A07D35',
+                      textDecoration: 'none',
+                      transition: 'color 0.2s ease'
+                    }}
+                    onMouseEnter={e => e.currentTarget.style.color = '#8A6A2A'}
+                    onMouseLeave={e => e.currentTarget.style.color = '#A07D35'}>
                       {link.label}
                       <ArrowUpRight />
                     </Link>
@@ -219,9 +221,14 @@ export default function Navbar() {
                   justifyContent: 'center',
                   textDecoration: 'none',
                   padding: '0.9rem 1.5rem',
-                  border: '1px solid var(--border-medium)',
-                  color: 'var(--text-primary)'
+                  border: '1px solid #A07D35',
+                  background: '#A07D35',
+                  color: '#FAFAF8',
+                  fontWeight: 500,
+                  transition: 'all 0.2s ease'
                 }}
+                onMouseEnter={e => { e.currentTarget.style.background = '#8A6A2A'; e.currentTarget.style.borderColor = '#8A6A2A'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = '#A07D35'; e.currentTarget.style.borderColor = '#A07D35'; }}
               >
                 Book a call
                 <ArrowUpRight size={16} />
