@@ -3,32 +3,32 @@ import { BarChart3, Shield, FileText, GraduationCap, Handshake, ClipboardList } 
 export const services = [
     {
       icon: BarChart3,
-      title: 'Financial consultancy',
-      description: 'Strategic financial planning, analysis, and advisory for businesses at every stage of growth — from startups to established enterprises.',
+      title: 'Operations Management',
+      description: 'Streamline your operational workflows and processes for maximum efficiency, cost optimization, and scalable growth across all business functions.',
     },
     {
       icon: Shield,
-      title: 'Audit & assurance',
-      description: 'Independent, thorough audit services to ensure compliance, accuracy, and stakeholder confidence in your financial reporting.',
+      title: 'Project Management',
+      description: 'End-to-end project delivery with strategic planning, risk mitigation, timeline management, and resource allocation to ensure successful outcomes.',
     },
     {
       icon: FileText,
-      title: 'Tax planning & compliance',
-      description: 'Proactive tax strategy and compliance services for corporations, SMEs, and nonprofit organisations operating locally and internationally.',
+      title: 'Company Consulting',
+      description: 'Strategic business advisory and consulting services to drive organizational transformation, improve performance, and achieve sustainable growth.',
     },
     {
       icon: GraduationCap,
-      title: 'Career mentorship',
-      description: 'Structured guidance for aspiring accountants and finance professionals — from ICAN/ACCA preparation to career development and leadership.',
+      title: 'Customer Service',
+      description: 'Elevate your customer experience with tailored service strategies, training programs, and operational frameworks that build loyalty and satisfaction.',
     },
     {
       icon: Handshake,
-      title: 'Nonprofit advisory',
-      description: 'Governance, financial management, and regulatory compliance advisory specifically tailored for nonprofit and NGO organisations.',
+      title: 'Supply Chain Expert',
+      description: 'Optimize your supply chain operations from procurement to delivery with expert guidance on logistics, vendor management, and inventory optimization.',
     },
     {
       icon: ClipboardList,
-      title: 'Business registration & compliance',
-      description: 'End-to-end support for business formation, corporate governance setup, and ongoing regulatory compliance in Nigeria and beyond.',
+      title: 'Operations Human Resource',
+      description: 'Strategic HR operations including talent acquisition, workforce planning, performance management, and organizational development.',
     },
   ]

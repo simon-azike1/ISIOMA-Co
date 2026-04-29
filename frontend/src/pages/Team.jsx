@@ -8,8 +8,8 @@ const team = [
     role: 'Founder & Managing Partner',
     image: '/isioma.png',
     hasImage: true,
-    bio: 'Fellow of the Institute of Chartered Accountants of Nigeria (ICAN) with over 15 years of experience in audit, tax, and financial advisory.',
-    credentials: ['ICAN Fellow', '15+ Years Experience', 'MBA'],
+    bio: 'Cross-functional expert with over 15 years of experience in operations management, strategic transformation, and organizational development.',
+    credentials: ['Operations Expert', '15+ Years Experience', 'MBA'],
     linkedin: '#',
     email: 'Isijik@gmail.com',
     phone: '+32 485 58 42 52'
@@ -19,8 +19,8 @@ const team = [
     role: 'Senior Tax Consultant',
     image: '/obi.png',
     hasImage: true,
-    bio: 'Specialises in corporate tax planning and compliance for SMEs and multinational corporations operating in West Africa.',
-    credentials: ['ACA', 'Tax Specialist', '10+ Years'],
+    bio: 'Specialises in HR operations and talent strategy for SMEs and growing organizations across diverse industries.',
+    credentials: ['ACA', 'HR Specialist', '10+ Years'],
     linkedin: '#',
     email: 'contact@isiomaandco.com',
     phone: '+234 800 000 0000'
@@ -30,8 +30,8 @@ const team = [
     role: 'Business Advisory Lead',
     image: '/emeke.png',
     hasImage: true,
-    bio: 'Expert in financial restructuring and business strategy, having worked with over 50 startups and SMEs across Africa.',
-    credentials: ['MBA', 'Strategy Expert', '8+ Years'],
+    bio: 'Expert in supply chain optimization and project management, having worked with over 50 organizations across diverse sectors.',
+    credentials: ['MBA', 'Supply Chain Expert', '8+ Years'],
     linkedin: '#',
     email: 'contact@isiomaandco.com',
     phone: '+234 800 000 0000'
@@ -41,8 +41,8 @@ const team = [
     role: 'Audit Manager',
     image: '/ajulu.png',
     hasImage: true,
-    bio: 'Leads audit engagements for nonprofit organisations and corporates, ensuring compliance with international standards.',
-    credentials: ['ACA', 'Audit Lead', '7+ Years'],
+    bio: 'Leads operational efficiency initiatives for nonprofits and corporates, ensuring best practices and measurable outcomes.',
+    credentials: ['ACA', 'Operations Lead', '7+ Years'],
     linkedin: '#',
     email: 'contact@isiomaandco.com',
     phone: '+234 800 000 0000'
@@ -69,7 +69,7 @@ export default function Team() {
               </span>
             </h1>
             <p className="text-base text-[var(--text-secondary)] leading-relaxed">
-              A team of chartered accountants, business advisors, and mentors committed to delivering exceptional results for every client.
+              A team of cross-functional experts in operations, HR, supply chain, and project management committed to delivering exceptional results for every client.
             </p>
           </motion.div>
         </div>
@@ -166,7 +166,7 @@ export default function Team() {
             <SectionHeader 
               eyebrow="Join Our Team"
               title="Want to work with us?"
-              description="We're always looking for talented individuals who share our values of integrity, precision, and client-focused service."
+              description="We're always looking for talented individuals who share our values of operational excellence, innovation, and client-focused service."
               center
             />
             <a href="/contact" className="btn-primary" style={{ display: 'inline-flex', marginTop: '1.5rem' }}>

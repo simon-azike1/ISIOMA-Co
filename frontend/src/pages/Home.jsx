@@ -22,22 +22,21 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.p
+            {/* <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="eyebrow mb-6"
             >
               Chartered Accountant · Consultant · Mentor
-            </motion.p>
+            </motion.p> */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--text-primary)] leading-tight mb-6"
             >
-              Financial clarity.<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent)] to-[var(--accent-dark)]">Strategic growth.</span>
+              Operational Excellence <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent)] to-[var(--accent-dark)]">Sustainable results </span> <br/>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -45,7 +44,7 @@ export default function Home() {
               transition={{ delay: 0.4 }}
               className="text-lg text-[var(--text-secondary)] leading-relaxed mb-10 max-w-md"
             >
-              With over a decade of chartered accountancy expertise, we guide businesses, nonprofits, and individuals toward sound financial decisions and lasting growth.
+              With cross-functional expertise in operations, HR, supply chain, and project management, we guide organizations toward peak efficiency and sustainable growth.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -106,11 +105,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
             <div className="max-w-xl">
-              <SectionHeader
-                eyebrow="What we offer"
-                title="Services built around your needs"
-                description="From audit and tax to mentorship and nonprofit advisory — our services are designed for organisations and individuals who demand precision and trust."
-              />
+              <SectionHeader eyebrow="What we offer" title="Services built around your Needs" description="From audit and tax to talent development and organizational advisory — our services are designed for organisations and individuals who demand precision and trust."/>
             </div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

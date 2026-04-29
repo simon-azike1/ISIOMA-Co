@@ -63,9 +63,9 @@ export default function Services() {
               >
                 Comprehensive{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent)] to-[var(--accent-dark)]">
-                  financial
+                  Financial
                 </span>{' '}
-                and advisory services
+                and Advisory services
               </motion.h1>
               
               <motion.p 
@@ -74,7 +74,7 @@ export default function Services() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-lg text-[var(--text-secondary)] leading-relaxed max-w-xl mb-8"
               >
-                Every service we offer is delivered with the rigour of a chartered accountant and the strategic lens of a business advisor. We're committed to your financial clarity and growth.
+                Every service we offer is delivered with the rigour of a operations expert and the strategic lens of a business advisor. We're committed to your financial clarity and growth.
               </motion.p>
               
               <motion.div
@@ -176,7 +176,7 @@ export default function Services() {
             <SectionHeader 
               eyebrow="What we offer" 
               title="Services tailored to your needs" 
-              description="From audit and tax to mentorship and nonprofit advisory — our services are designed for organisations and individuals who demand precision and trust."
+              description="From audit and tax to talent development and organizational advisory — our services are designed for organisations and individuals who demand precision and trust."
               center
             />
           </motion.div>
@@ -218,20 +218,20 @@ export default function Services() {
               <div className="space-y-6">
                 {[
                   {
-                    title: 'Chartered expertise',
-                    description: 'Fellow of ICAN with over 15 years of hands-on experience in audit, tax, and financial advisory.'
+                    title: 'Cross-functional expertise',
+                    description: 'Deep experience across operations, HR, supply chain, and project management with proven methodologies.'
                   },
                   {
                     title: 'Strategic approach',
-                    description: 'We don\'t just crunch numbers — we provide actionable insights that drive business growth and sustainability.'
+                    description: 'We don\'t just identify problems — we provide actionable insights that drive efficiency and growth.'
                   },
                   {
                     title: 'Personalized service',
-                    description: 'Every client receives dedicated attention and solutions tailored to their unique financial landscape.'
+                    description: 'Every client receives dedicated attention and solutions tailored to their unique operational landscape.'
                   },
                   {
                     title: 'Proven track record',
-                    description: 'Trusted by corporations, SMEs, and nonprofits across Nigeria and West Africa for reliable financial guidance.'
+                    description: 'Trusted by corporations, SMEs, and nonprofits across industries for reliable operational guidance and measurable results.'
                   },
                 ].map((item, index) => (
                   <motion.div

@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { ArrowRight, TrendingUp, Shield, Users, Target, Award, CheckCircle2, Phone, ChevronDown, Lightbulb, Briefcase, FileText, GraduationCap, Heart } from 'lucide-react'
+import { ArrowRight, TrendingUp, Shield, Users, Target, Award, CheckCircle2, Phone, ChevronDown, Lightbulb, Briefcase, FileText, GraduationCap, Heart, BarChart3, ClipboardList } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import SectionHeader from '../components/SectionHeader'
 import { consultancyAPI, faqsAPI } from '../services/api'
@@ -15,7 +15,9 @@ const iconMap = {
   Briefcase,
   FileText,
   GraduationCap,
-  Heart
+  Heart,
+  BarChart3,
+  ClipboardList
 }
 
 const stats = [
@@ -33,7 +35,7 @@ const whyChooseUs = [
   },
   {
     title: 'Tailored solutions',
-    description: 'No generic templates â€” every strategy is built for your specific context.',
+    description: 'No generic templates — every strategy is built for your specific context.',
     icon: Target
   },
   {
@@ -43,7 +45,7 @@ const whyChooseUs = [
   },
   {
     title: 'Proven track record',
-    description: 'Documented outcomes across financial, governance, and mentorship engagements.',
+    description: 'Documented outcomes across operational, HR, and strategic engagements.',
     icon: TrendingUp
   },
 ]

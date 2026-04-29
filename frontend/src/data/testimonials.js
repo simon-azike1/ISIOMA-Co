@@ -1,20 +1,20 @@
 export const testimonials = [
     {
-      quote: 'Working with Isioma transformed how we approach financial governance. Her depth of expertise and ability to simplify complex issues made an immediate difference to our board',
-      name: 'Emeka Adeyemi',
-      role: 'CEO',
-      company: 'Meridian Capital Group',
+      quote: 'The operations team transformed how we work. Their lean methodology implementation cut our processing time in half and boosted team morale significantly.',
+      name: 'Sarah Mitchell',
+      role: 'Operations Director',
+      company: 'TechFlow Solutions',
     },
     {
-      quote: 'The mentorship programme she designed gave me the structure and accountability I needed to finally pass my finals and land my first role at a Big 4 firm.',
-      name: 'Chisom Eze',
-      role: 'Associate',
-      company: 'Deloitte Nigeria',
+      quote: 'Our customer satisfaction scores had plateaued. The new service framework and training program they designed helped us break through and achieve industry-leading ratings.',
+      name: 'James Okoro',
+      role: 'Customer Success Lead',
+      company: 'CloudScale Inc',
     },
     {
-      quote: 'She understood the unique challenges nonprofits face in Nigeria. Our compliance has never been in better shape, and our donor reporting is now a point of pride.',
-      name: 'Ngozi Obi',
-      role: 'Executive Director',
-      company: 'GreenPath NGO',
+      quote: 'From vendor chaos to a streamlined supply chain. Their procurement and logistics expertise saved us 30% in operational costs within the first year.',
+      name: 'Amina Bello',
+      role: 'Procurement Manager',
+      company: 'RetailMax Nigeria',
     },
   ]

@@ -58,7 +58,7 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-base text-[var(--text-secondary)] leading-relaxed max-w-xl mb-6"
             >
-              Trusted chartered accountancy and business advisory services. We provide audit, tax, financial advisory, and mentorship services to businesses and individuals across Nigeria and West Africa.
+              Trusted operational and strategic advisory services. We provide expertise in operations management, HR, supply chain, project management, and customer service to organizations across diverse industries.
             </motion.p>
           </motion.div>
              
@@ -101,7 +101,7 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4"
             >
-              With over fifteen years in chartered accountancy, our principal has served corporations, SMEs, and nonprofit organisations across Nigeria and West Africa. What began as a practice focused purely on audit and compliance evolved into a full-service consultancy when it became clear that clients needed more than just accurate numbers — they needed strategic guidance.
+              With over fifteen years in cross-functional expertise, our principal has served corporations, SMEs, and nonprofit organisations across Nigeria and West Africa. What began as a practice focused purely on operational excellence evolved into a full-service consultancy when it became clear that clients needed more than just accurate numbers — they needed strategic guidance.
             </motion.p>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -110,7 +110,7 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4"
             >
-              The mentorship arm grew naturally from that same insight: too many talented young accountants lacked access to quality guidance. Today, mentorship is a cornerstone of everything we do.
+              Our talent development approach grew naturally from that same insight: too many organizations lacked access to quality operational guidance. Today, capability building is a cornerstone of everything we do.
             </motion.p>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -119,7 +119,7 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-sm text-[var(--text-secondary)] leading-relaxed"
             >
-              We work with profit and nonprofit organisations alike, acting as trusted advisors, agents, and advocates for financial soundness and organisational health.
+              We work with organizations across sectors, acting as trusted partners and advocates for operational excellence and sustainable growth.
             </motion.p>
           </motion.div>
 
@@ -132,9 +132,9 @@ export default function About() {
             className="flex flex-col gap-4"
           >
             {[
-              { label: 'Qualification', value: 'Fellow, Institute of Chartered Accountants of Nigeria (ICAN)' },
-              { label: 'Experience', value: '15+ years in audit, advisory, and consultancy' },
-              { label: 'Specialisation', value: 'Financial restructuring, nonprofit governance, tax strategy' },
+              { label: 'Expertise', value: 'Operations, HR, Supply Chain, Project Management' },
+              { label: 'Experience', value: '15+ years in operational and strategic advisory' },
+              { label: 'Specialisation', value: 'Process optimization, organizational development, strategic transformation' },
               { label: 'Focus areas', value: 'Nigeria · West Africa · Diaspora organisations' },
             ].map(({ label, value }, index) => (
               <motion.div 

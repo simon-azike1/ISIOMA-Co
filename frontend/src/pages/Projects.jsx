@@ -6,9 +6,9 @@ import ProjectCard from '../components/ProjectCard'
 import { projectsAPI } from '../services/api'
 
 const stats = [
-  { number: '40%', label: 'Average cost reduction achieved', icon: TrendingUp },
+  { number: '35%', label: 'Average cost reduction achieved', icon: TrendingUp },
   { number: '15+', label: 'Years of combined expertise', icon: Award },
-  { number: '85%', label: 'Mentorship pass rate', icon: Users },
+  { number: '42%', label: 'Customer satisfaction improvement', icon: Users },
 ]
 
 const whyChooseUs = [
@@ -76,7 +76,7 @@ export default function Projects() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-base text-[var(--text-secondary)] leading-relaxed max-w-xl mb-8"
             >
-              We don't just deliver reports — we deliver outcomes. From financial restructuring that cut costs by 40% to mentorship programmes with an 85% ICAN pass rate, see how we've helped organisations like yours succeed.
+              We don't just deliver reports — we deliver outcomes. From operations management that cut costs by 35% to customer service frameworks with 42% satisfaction improvements, see how we've helped organisations like yours succeed.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
