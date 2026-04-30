@@ -75,10 +75,10 @@ export default function Footer() {
 
         <div className="border-t mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4" style={{ borderColor: '#2C2C2C' }}>
           <p className="text-xs" style={{ color: '#737373' }}>
-            © {new Date().getFullYear()} Isioma & Co. All rights reserved.
+            &copy; {new Date().getFullYear()} Isioma &amp; Co. All rights reserved.
           </p>
           <p className="text-xs" style={{ color: '#737373' }}>
-            Chartered Accountants · Business Consultants · Mentors
+            Chartered Accountants &middot; Business Consultants &middot; Mentors
           </p>
         </div>
       </div>

@@ -28,7 +28,7 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="eyebrow mb-6"
             >
-              Chartered Accountant · Consultant · Mentor
+              Chartered Accountant &middot; Consultant &middot; Mentor
             </motion.p> */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}

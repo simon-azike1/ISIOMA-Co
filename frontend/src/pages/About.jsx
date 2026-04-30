@@ -135,7 +135,7 @@ export default function About() {
               { label: 'Expertise', value: 'Operations, HR, Supply Chain, Project Management' },
               { label: 'Experience', value: '15+ years in operational and strategic advisory' },
               { label: 'Specialisation', value: 'Process optimization, organizational development, strategic transformation' },
-              { label: 'Focus areas', value: 'Nigeria · West Africa · Diaspora organisations' },
+              { label: 'Focus areas', value: 'Nigeria \u00B7 West Africa \u00B7 Diaspora organisations' },
             ].map(({ label, value }, index) => (
               <motion.div 
                 key={label} 
